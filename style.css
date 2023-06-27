@@ -1,0 +1,97 @@
+body {
+ background: linear-gradient(to bottom, #ff7f00, #ffaf5a);
+ font-family: "Times New Roman", Times, serif; 
+ font-weight:500;
+}
+
+.container-fluid {
+ margin-top: 50px;
+}
+
+.containerStyle {
+ background: linear-gradient(to bottom, #ffcc00, #ff9900); 
+ border-radius: 10px;
+ padding: 20px;
+ animation: gradientAnimation 5s linear infinite alternate; 
+}
+
+@keyframes gradientAnimation {
+ 0% {
+   background-position: 0% 50%;
+ }
+ 100% {
+   background-position: 100% 50%;
+ }
+}
+
+
+.form-group {
+ position: relative;
+}
+
+.form-control {
+ border: none;
+ border-bottom: 2px solid #888888;
+ border-radius: 0;
+ box-shadow: none;
+ padding: 10px;
+ background-color: transparent;
+ transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+ border-color: #000000;
+ outline: none;
+}
+
+.label-float {
+ position: absolute;
+ pointer-events: none;
+ top: 10px;
+ left: 10px;
+ transition: 0.2s ease all;
+}
+
+.form-control:focus ~ .label-float,
+.form-control:not(:placeholder-shown) ~ .label-float {
+ top: -15px;
+ font-size: 12px;
+ color: #000000;
+}
+
+.buttonStyle {
+ background-color: #000000;
+ border: none;
+ color: #ffffff;
+ padding: 10px 20px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+ margin-top: 10px;
+ cursor: pointer;
+ transition: background-color 0.3s ease;
+}
+
+.buttonStyle:hover {
+ background-color: #333333;
+}
+
+.hidden {
+ display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 576px) {
+ .col-sm-1,
+ .col-sm-5 {
+   padding-left: 0;
+   padding-right: 0;
+ }
+}
+
+@media (max-width: 767px) {
+ .containerStyle {
+   padding: 10px;
+ }
+}
